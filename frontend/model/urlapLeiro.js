@@ -20,7 +20,7 @@ class UrlapLeiro{
     }
 
     adatTroles(id){
-        this.#adatok.splice(id, 1);
+        this.#adatok.splice(id, 0);
     }
 
     setAdatok(adatok){

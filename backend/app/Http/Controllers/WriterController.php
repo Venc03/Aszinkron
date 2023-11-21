@@ -20,23 +20,22 @@ class WriterController extends Controller
         $writer->nev = $request->nev;
         $writer->szul_datum = $request->szul_datum;
         $writer->save();
+        return Writer::find($writer->id);
     }
 
-    public function destroy($nev_id)
+    public function destroy($id)
     {
-        $writer = Writer::where('nev_id', $nev_id)->delete();
+        $writer = Writer::find($id)->delete();
         return response()->json(['messeage' => 'Sikeres törlés!'], 201);
     }
 
     public function update(Request $request, $id)
     {
-        $writer = Writer::where('nev_id',$id);
+        $writer = Writer::find($id);
         $writer->nev = $request->nev;
         $writer->szul_datum = $request->szul_datum;
         $writer->save();
         return redirect('/api/writers');
     }
 
-
-    //
 }

@@ -46,6 +46,12 @@ class DataService {
             })
     }
 
+    updateData(url, id){
+        
+    }
+
+    
+
 
 }
 export default DataService;

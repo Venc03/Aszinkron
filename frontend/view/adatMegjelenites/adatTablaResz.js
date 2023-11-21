@@ -13,7 +13,7 @@ class AdatTablaResz{
         this.#trElem.attr('id', `${this.#id}`);
         this.#trElem.append(this.#kiiras())
         console.log(this.#id);
-        $(`.torles`).on("click",()=>{
+        $(`.torles${this.#id}`).on("click",()=>{
             this.#trElem.remove();
             this.#torlestrigger();
         })
@@ -63,7 +63,7 @@ class AdatTablaResz{
             console.log(key)
             
         }
-        txt += `<td><button class="modosit${this.#id}" ">áttírás</button></td><td><button class="torles">törlés</button></td>`
+        txt += `<td><button class="modosit${this.#id}" ">áttírás</button></td><td><button class="torles${this.#id}">törlés</button></td>`
         return txt;
     }
     #torlestrigger(){
@@ -71,7 +71,7 @@ class AdatTablaResz{
     }
 
     #modositTrigger(){
-        window.dispatchEvent(new CustomEvent("modosit", {detail:this}));
+        window.dispatchEvent(new CustomEvent("modosit", {detail:this.#id}));
     }
 
 }

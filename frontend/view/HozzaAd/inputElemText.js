@@ -19,7 +19,7 @@ class InputElemKiiras {
     #inputElem_kiiras() {
         let txt = "";
        txt = `<label for="${this.#key}">${this.#adatok.megjelenes}</label>
-       <input type="${this.#adatok.tipus}" class="${this.#key}" placeholder="${this.#adatok.placeholder}" pattern="${this.#adatok.pattern}">`
+       <input id='inputElemkiir' type="${this.#adatok.tipus}" class="${this.#key}" placeholder="${this.#adatok.placeholder}" pattern="${this.#adatok.pattern}">`
         return txt;
     }
 
