@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\WriterController;
-use App\Models\WriterModel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/api/writers', [WriterController::class, 'index']);
-Route::post('/api/writers', [WriterController::class, 'store']);
 
+
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});

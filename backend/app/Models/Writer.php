@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class WriterModel extends Model
+class Writer extends Model
 {
-    use HasFactory;
 
-    protected $primarykey = 'id';
-
+    protected $primarykey = ["nev_id"];
     protected $fillable = [
-        'name',
-        'birth',
+        
+        "nev",
+        "szul_datum"
     ];
 
+
+    use HasFactory;
 }
